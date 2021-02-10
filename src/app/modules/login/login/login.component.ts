@@ -30,7 +30,7 @@ export class LoginComponent implements OnInit {
     this.loginservice.login(this.loginForm.value.usuario, this.loginForm.value.password)
       .subscribe(item =>{
         
-       
+        this.router.navigateByUrl('/menu');
     }, (err) => {
           console.log(err);
       this.message = err.error.message;

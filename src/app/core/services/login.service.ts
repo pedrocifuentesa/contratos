@@ -49,5 +49,22 @@ export class LoginService {
     localStorage.setItem('expira', hoy.getTime().toString());
 
   }
+  estaAutenticado(): boolean {
+        
+    if (localStorage.getItem('token')===null)
+      return false;
 
+    if (localStorage.getItem('usuario') === null)
+      return false;
+
+    const expira = Number(localStorage.getItem('expira'));
+    const expiraDate = new Date();
+    expiraDate.setTime(expira);
+
+    if (expiraDate > new Date()) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
