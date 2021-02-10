@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { LoginComponent } from './modules/login/login/login.component';
 import { MenuComponent } from './modules/menu/menu/menu.component';
+import { ContratoComponent } from './modules/menu/menu/components/contrato/contrato.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { MenuComponent } from './modules/menu/menu/menu.component';
     AppComponent,
     LoginComponent,
     MenuComponent,
+    ContratoComponent,
   ],
   imports: [
     BrowserModule,

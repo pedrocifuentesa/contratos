@@ -71,4 +71,8 @@ export class LoginService {
       return false;
     }
   }
+
+  getUsuario() {
+    return JSON.parse(localStorage.getItem('usuario')) || {};
+  }
 }
