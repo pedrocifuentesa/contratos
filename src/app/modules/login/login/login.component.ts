@@ -13,7 +13,7 @@ export class LoginComponent implements OnInit {
   public message=null;
 
   public loginForm = this.fb.group({
-    email: ['',[ Validators.required, Validators.email]],
+    usuario: ['',[ Validators.required]],
     password: ['', Validators.required]
   });
 
@@ -27,7 +27,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     console.log(this.loginForm.value);
-    this.loginservice.login(this.loginForm.value.email, this.loginForm.value.password)
+    this.loginservice.login(this.loginForm.value.usuario, this.loginForm.value.password)
       .subscribe(item =>{
         
         this.router.navigateByUrl('/');

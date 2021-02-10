@@ -8,7 +8,7 @@ import { Transaccion } from '../models/model_transaccion';
   providedIn: 'root'
 })
 export class LoginService {
-  private host = 'http://localhost:4000';
+  private host = 'http://localhost:8080';
   
   // private host = 'https://node4g-test.herokuapp.com';
   private url = this.host + '/api/v1';
@@ -20,13 +20,12 @@ export class LoginService {
     return localStorage.getItem('token') || '';
   }
 
-  login(email:String, password: String){
+  login(usuario:String, pass: String){
     let data = {
-      email,
-      password
+      usuario,
+      pass
     }
-    return this.http.post<Transaccion>(`${this.url}/login`, data, 
-    { withCredentials: true })
+    return this.http.post<Transaccion>(`${this.url}/login`, data)
     .pipe(
       tap((resp: Transaccion )=> {
         if (resp.result ){
