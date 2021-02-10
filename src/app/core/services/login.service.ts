@@ -9,6 +9,7 @@ import { Transaccion } from '../models/model_transaccion';
 })
 export class LoginService {
   private host = 'http://localhost:4000';
+  
   // private host = 'https://node4g-test.herokuapp.com';
   private url = this.host + '/api/v1';
   public usuario: ModelUsuario;
