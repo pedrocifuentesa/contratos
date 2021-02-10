@@ -32,9 +32,13 @@ export class LoginService {
           this.guardarLocalStorage(resp.data['token']);
 
           this.usuario = new ModelUsuario(
-            resp.data['usuarioId'],
-            resp.data['nombre'],
-            resp.data['role']
+            resp.data['idusuario'],
+            resp.data['rut'],
+            resp.data['usuario'],
+            resp.data['pass'],
+            resp.data['fcreacion'],
+            resp.data['correo'],
+            resp.data['tipoUsuario'],
           );
           localStorage.setItem('usuario', JSON.stringify(this.usuario));
         }
