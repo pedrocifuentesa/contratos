@@ -21,10 +21,10 @@ constructor(
       if (this.loginService.getUsuario().tipoUsuario === 'ADMIN') {
           return true;
         } else {
-        this.router.navigateByUrl('/login');
+        this.router.navigateByUrl('/menu');
           return false;
         }
-      }else this.router.navigateByUrl('/login');
+      }else this.router.navigateByUrl('/menu');
 
   }
 

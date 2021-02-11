@@ -26,7 +26,6 @@ export class LoginComponent implements OnInit {
   ngOnInit(){}
 
   login(){
-    console.log(this.loginForm.value);
     this.loginservice.login(this.loginForm.value.usuario, this.loginForm.value.password)
       .subscribe(item =>{
         
